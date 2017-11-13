@@ -12,6 +12,20 @@ exports.home = function(req, res) {
     });
 }
 
+exports.news = function(req, res) {
+    res.render('news', {
+        title: "Hendrick Leadz | News",
+        style: "news_styles.css"
+    });
+}
+
+exports.gallery = function(req, res) {
+    res.render('gallery', {
+        title: "Hendrick Leadz | Gallery",
+        style: "gallery_styles.css"
+    });
+}
+
 exports.contact = function(req, res) {
     res.render('contact', {
         title: "Hendrick Leadz | Contact",
@@ -19,7 +33,10 @@ exports.contact = function(req, res) {
     });
 }
 
-exports.notFound = function(req, res) {
-    res.send("This is not the page you are looking for!");
+exports.notfound = function(req, res) {
+    res.render('notfound', {
+        title: "Hendrick Leadz | Not Found",
+        style: "styles.css"
+    });
 };
 
