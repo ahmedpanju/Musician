@@ -16,11 +16,13 @@ app.get('/', routes.intro);
 
 app.get('/home', routes.home);
 
+app.get('/news', routes.news);
+
+app.get('/gallery', routes.gallery)
+
 app.get('/contact', routes.contact);
 
-app.get('*', routes.notFound);
+app.get('*', routes.notfound);
 
 
-app.listen(3000, function(){
-    console.log("The app is running on Local Host 3000");
-});
+app.listen(process.env.PORT || 3000);
