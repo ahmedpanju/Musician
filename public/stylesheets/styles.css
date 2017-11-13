@@ -31,6 +31,7 @@ body {
     width: 45%;
     height: 100vh;
     float: right;
+    background-color: #1a1a1a;
 }
 
 .extra_panel h1 {
@@ -38,6 +39,7 @@ body {
     color: #f2f2f2;
     font-size: 60px;
     margin-top: 100px;
+    margin-left: 50px;
 }
 
 .extra_panel h1::first-letter {
@@ -48,9 +50,11 @@ body {
     color: white;
     font-family: 'Quicksand', sans-serif;
     font-size: 30px;
+    margin-left: 50px;
 }
 
 .play_button {
+    margin-left: 50px;
     margin-top: 60px;
     width: 100px;
     height: 100px;
@@ -90,6 +94,7 @@ body {
 }
 
 .enter {
+    margin-left: 50px;
     width: 200px;
     color: white;
     background: none;
@@ -101,7 +106,32 @@ body {
     cursor: pointer;
 }
 
-/* Navigation Bar (top) */
+.enter span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.enter span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.enter:hover span {
+    padding-right: 25px;
+}
+
+.enter:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* Navigation Bar */
 
 .navbar_top {
     margin: 0;
@@ -131,19 +161,21 @@ body {
     background-color: #111;
 }
 
+
 .container h1 {
-    color: red;
-    font-family: 'Roboto', sans-serif;
+    color: #f2f2f2;
+    font-family: 'Oswald', sans-serif;
     text-align: center;
     font-size: 60px;
     border-bottom: 2px solid white;
     width: 90%;
     margin: auto;
     margin-top: 30px;
+    font-weight: 500;
 }
 
 .find_here h1 {
-    color: red;
+    color: #f2f2f2;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     font-size: 60px;
@@ -151,6 +183,7 @@ body {
     width: 90%;
     margin: auto;
     margin-top: 30px;
+    font-weight: 500;
 }
 
 .container .jumbotron {
@@ -191,6 +224,19 @@ body {
     position: absolute;
 }
 
+.container .show_dates ul {
+    margin-top: 50px;
+}
+
+.container .show_dates ul li {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
 .container .twitter_feed {
     margin-top: 50px;
     position: absolute;
@@ -205,20 +251,47 @@ body {
     width: 90%;
     margin: auto;
     margin-top: 50px;
-    height: 300px;
     border: 3px solid white;
     position: relative;
     top: 550px;
+    height: 210px;
+}
+
+.find_here .social_media {
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: 30px;
+}
+
+.find_here .social_media i{
+    color: white;
+    margin-right: 100px;
+}
+
+.find_here .social_media i:last-child{ 
+    margin-right: 0;
 }
 
 /* Footer */ 
 
 .footer {
-    position: absolute;
     margin: 0;
     padding: 0;
     overflow: hidden;
     width: 100%;
-    bottom: -900px;
-    background-color: red;
+    background-color: #333333;
+    position: absolute;
+    right: 0;
+    bottom: -800;
+    left: 0;
+    height: 75px;
+}
+
+.footer li {
+    color: white;
+    font-family: 'roboto', sans-serif;
+    margin-top: 25px;
+    margin-left: 10px;
 }
