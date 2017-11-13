@@ -42,6 +42,13 @@ body {
     left: 5%;
 }
 
+.contact h1 {
+    color: white;
+    font-weight: 400;
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif; 
+}
+
 .contact label {
     color: white;
     font-family: 'Quicksand', sans-serif;
@@ -58,6 +65,7 @@ body {
     padding: 10px;
     transition: 0.3s;
     outline: none;
+    color: white;
 }
 
 .contact input:focus {
@@ -76,6 +84,7 @@ body {
     width: 350px;
     height: 150px;
     transition: 0.3s;
+    color: white;
 }
 
 .contact textarea:focus {
@@ -90,3 +99,5 @@ body {
     border: 2px solid white;
     cursor: pointer;
 }
+
+
